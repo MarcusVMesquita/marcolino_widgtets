@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="311">
+
+		<title>Banner - Marcolino Plays</title>
+		<script src="Settings/settings.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>
+			function loadWebFont(fontToLoad) {
+			  WebFont.load({
+			    google: {
+			      families: [fontToLoad]
+			    }
+			  });
+			}
+
+			loadWebFont(settings.fonts.primaryFont);
+			loadWebFont(settings.fonts.subFont);
+		</script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css">
+
+		<!-- <link rel="icon" href="http://nerdordie.com/wp-content/uploads/2016/05/cropped-NoDFavicon-32x32.png" sizes="32x32"/>
+	    <link rel="icon" href="http://nerdordie.com/wp-content/uploads/2016/05/cropped-NoDFavicon-192x192.png" sizes="192x192"/>
+	    <link rel="apple-touch-icon-precomposed" href="http://nerdordie.com/wp-content/uploads/2016/05/cropped-NoDFavicon-180x180.png"/>
+	    <meta name="msapplication-TileImage" content="http://nerdordie.com/wp-content/uploads/2016/05/cropped-NoDFavicon-270x270.png"/> -->
+	</head>
+	<body>
+		<div id="scene">
+			<div id="bg">
+			</div>
+
+			<div id="updates">
+
+				<div id="social">
+					<div id="tt" class="item">
+						<div class="network">
+							<div class="borderTop"></div>
+							<div class="inner">
+								<div class="icon"><i class="fa fa-twitch" aria-hidden="true"></i></div>
+								<div id="twitch" class="socialName primaryFont"></div>
+							</div>
+						</div>
+					</div>
+          <div id="tw" class="item">
+						<div class="network">
+							<div class="borderTop"></div>
+							<div class="inner">
+								<div id="twitterHeader" class="socialHead secondaryFont">Recent Follow</div>
+								<div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+								<div id="twitter" class="socialName primaryFont"></div>
+							</div>
+						</div>
+					</div>
+					<div id="fb" class="item">
+						<div class="network">
+							<div class="borderTop"></div>
+							<div class="inner">
+								<div id="facebookHeader" class="socialHead secondaryFont">Recent Sub</div>
+								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+								<div id="facebook" class="socialName primaryFont"></div>
+							</div>
+						</div>
+					</div>
+					<div id="in" class="item">
+						<div class="network">
+							<div class="borderTop"></div>
+							<div class="inner">
+								<div id="instagramHeader" class="socialHead secondaryFont">Recent Donate</div>
+								<div class="icon"><i class="fa fa-paypal" aria-hidden="true"></i></div>
+								<div id="instagram" class="socialName primaryFont"></div>
+							</div>
+						</div>
+					</div>
+					<div id="yt" class="item">
+						<div class="network">
+							<div class="borderTop"></div>
+							<div class="inner">
+								<div id="youtubeHeader" class="socialHead secondaryFont">Biggest Donate</div>
+								<div class="icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+								<div id="youtube" class="socialName primaryFont"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
