@@ -106,7 +106,7 @@ function getNames(){
 
 
 getNames(); // load ASAP
-window.setInterval(getNames, 1000);
+window.setInterval(getNames, 100);
 
 // Social
 $("#displaySocial").html(settings.social.displaySocial);

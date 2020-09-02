@@ -1,0 +1,205 @@
+/* All html objects will be wrapped in the #wrap div */
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+/* Normal Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 3840px;
+	height: 720px;
+	overflow: hidden;
+}
+
+#updates {
+	/* position: absolute; */
+	top: 2px;
+	left: 0px;
+	background: rgba(0,0,0, .4);
+}
+
+#social {
+	position: absolute;
+	left: 0;
+	top: 0;
+	white-space: nowrap;
+}
+
+.network {
+	width: auto;
+	
+}
+
+.socialHead {
+	color: rgba(191, 30, 46, 1);
+	padding-left: 20px;
+	/* padding-right: 20px; */
+	position: relative;
+}
+
+.socialName {
+	/* padding-left: 20px; */
+	padding-right: 20px;
+	padding-left: 10px;
+	position: relative;
+}
+
+.borderTop {
+	/* position: absolute; */
+	height: 8px;
+	width: 100%;
+	top: 8px;
+	left: 0;
+}
+
+.borderRight {
+	position: absolute;
+	width: 2px;
+	top: 8px;
+	right: -2px;
+	height: 100%;
+}
+
+.borderLeft {
+	position: absolute;
+	width: 2px;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+.inner {
+	overflow: hidden;
+	background: rgba(0,0,0, .4);
+}
+
+#social {
+	transform-origin: right top;
+}
+
+#social .inner {
+	margin-right: 0px;
+	padding: 0 0 0px;
+}
+
+#social .item {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* ------------------- Animations ------------------- */
+/* Social Networks ---------------------------------- */
+#social .borderTop{
+	width: 0;
+}
+
+.network {
+	width: 0; 
+	padding-right: 0;
+}
+
+.icon {
+	padding-left: 15px;
+	padding-top: 12px;
+	font-size: 48px;
+	line-height: 56px;
+
+	white-space: nowrap;
+  overflow: hidden;
+  clear: both;
+  display: inline-block;
+}
+
+.socialHead,.socialName {
+	padding-top: 10px;
+	font-size: 56px;
+	line-height: 56px;
+
+	white-space: nowrap;
+  overflow: hidden;
+  clear: both;
+	display: inline-block;	
+}
+
+#social .animated .borderTop {
+	animation: soBorderTop 60s forwards;
+}
+
+@keyframes soBorderTop {
+  0% { width: 0;}
+  1.16% {width: 100%;}
+  98.84% {width: 100%;}
+  100% {width: 0;}
+}
+
+#social .animated .network {
+	animation: network 60s forwards;
+}
+
+@keyframes network {
+  0% { width: 0; padding-right: 0;}
+  0.23% { width: 0; padding-right: 0;}
+  1.4% {width: 100%; padding-right: 40px;}
+  98.6% {width: 100%;padding-right: 40px;}
+	99.77% {width: 0;padding-right: 0;}
+	100% {width: 0;padding-right: 0;}
+}
+
+.animated .icon {
+	animation: icon 60s forwards;
+}
+
+@keyframes icon {
+  0% { left: -1600px;}
+  1.4% { left: -1600px;}
+  3.03% { left: 0;}
+  96.96% {left: 0px;}
+  98.6% {left: -1600px;}
+  100% { left: -1600px;}
+}
+
+.animated .socialHead {
+	animation: socialHead 60s forwards;
+}
+
+@keyframes socialHead {
+  0% { left: -1600px;}
+  0.93% { left: -1600px;}
+  2.56% { left: 0;}
+  97.44% {left: 0px;}
+  99.07% {left: -1600px;}
+  100% { left: -1600px;}
+}
+
+.animated .socialName {
+	animation: socialName 60s forwards;
+}
+
+@keyframes socialName {
+  0% { left: 1600px;}
+  1.4% { left: 1600px;}
+  3.03% { left: 0;}
+  96.96% {left: 0px;}
+  98.6% {left: 1600px;}
+  100% { left: 1600px;}
+}
+
+.primaryFont {
+	color: #FFF;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.secondaryFont {
+	color: #eadc04;
+	font-family: 'Montserrat', sans-serif;
+}
