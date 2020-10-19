@@ -68,11 +68,11 @@ setVerticalOffset("#message", settings.fonts.countdownMessageVerticalOffset);
 setFontSize("#endMessage", settings.fonts.countdownEndMessageSize);
 setVerticalOffset("#endMessage", settings.fonts.countdownEndMessageVerticalOffset);
 
-//  Labels
-$('#followLine').html(settings.labels.labelOneHeading);
-$('#tipLine').html(settings.labels.labelTwoHeading);
-$('#bigTipLine').html(settings.labels.labelThreeHeading);
-$('#subLine').html(settings.labels.labelFourHeading);
+// //  Labels
+// $('#followLine').html(settings.labels.labelOneHeading);
+// $('#tipLine').html(settings.labels.labelTwoHeading);
+// $('#bigTipLine').html(settings.labels.labelThreeHeading);
+// $('#subLine').html(settings.labels.labelFourHeading);
 
 // Countdown
 var minutes = settings.countdown.countdownTime;
@@ -88,33 +88,24 @@ $('#countdown').css("transform", "scale(" + Number(settings.scaling.countdownSca
 function getNames(){
 	$.get("../TextFiles/" + settings.labels.labelOnePath + ".txt", function(data) {
 	    var myvar = data;
-	  $('#twitter').text(data);
+	  $('#qtdFollow').text(data);
 	});
 	$.get("../TextFiles/" + settings.labels.labelTwoPath + ".txt", function(data) {
 	    var myvar = data;
-	  $('#instagram').text(data);
-	});
-	$.get("../TextFiles/" + settings.labels.labelThreePath + ".txt", function(data) {
-	    var myvar = data;
-	  $('#youtube').text(data);
-	});
-	$.get("../TextFiles/" + settings.labels.labelFourPath + ".txt", function(data) {
-	  var myvar = data;
-	  $('#facebook').text(data);
+	  $('#qtdSub').text(data);
 	});
 }
-
 
 getNames(); // load ASAP
 window.setInterval(getNames, 100);
 
 // Social
 $("#displaySocial").html(settings.social.displaySocial);
-$("#twitch").html(settings.social.twitch);
-$("#twitterHeader").html(settings.social.recentFollowHeader);
-$("#facebookHeader").html(settings.social.recentSubHeader);
-$("#instagramHeader").html(settings.social.recentDonateHeader);
-$("#youtubeHeader").html(settings.social.biggestDonateHeader);
+$("#goalFollowName").html(settings.social.goalFollowName);
+$("#goalSubName").html(settings.social.goalSubName);
+$("#goalFollow").html("/" + settings.social.goalFollow);
+$("#goalSub").html("/" + settings.social.goalSub);
+
 
 // Add Animations
 
@@ -124,8 +115,9 @@ $( document ).ready(function() {
     tl = new TimelineMax({repeat: -1});
 
     $( ".item" ).each(function( index ) {
-        tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 2});
-        tl.to(this, 60, {onComplete:rmvAnimated, onCompleteParams:[this]});
+				// tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 2});
+				tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this]});
+        tl.to(this, 6, {onComplete:rmvAnimated, onCompleteParams:[this]});
     });
 
     function addAnimated(identifier){

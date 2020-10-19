@@ -102,11 +102,15 @@ function getNames(){
 	  var myvar = data;
 	  $('#facebook').text(data);
 	});
+	$.get("../TextFiles/" + settings.labels.labelFivePath + ".txt", function(data) {
+		var myvar = data;
+	$('#qtdFollow').text(data);
+});
 }
 
 
 getNames(); // load ASAP
-window.setInterval(getNames, 1000);
+window.setInterval(getNames, 100);
 
 // Social
 $("#displaySocial").html(settings.social.displaySocial);
@@ -115,6 +119,8 @@ $("#twitterHeader").html(settings.social.recentFollowHeader);
 $("#facebookHeader").html(settings.social.recentSubHeader);
 $("#instagramHeader").html(settings.social.recentDonateHeader);
 $("#youtubeHeader").html(settings.social.biggestDonateHeader);
+$("#goalFollowName").html(settings.social.goalFollowName);
+$("#goalFollow").html("/" + settings.social.goalFollow);
 
 // Add Animations
 
@@ -125,7 +131,7 @@ $( document ).ready(function() {
 
     $( ".item" ).each(function( index ) {
         tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 2});
-        tl.to(this, 60, {onComplete:rmvAnimated, onCompleteParams:[this]});
+        tl.to(this, 30, {onComplete:rmvAnimated, onCompleteParams:[this]});
     });
 
     function addAnimated(identifier){

@@ -10,48 +10,54 @@
 
 * {
 	box-sizing: border-box;
+	left: 0;
 }
 
 html, body {
 	margin: 0;
 	padding: 0;
-	width: 3840px;
-	height: 720px;
+	width: 500px;
+	height: 150px;
 	overflow: hidden;
+	
 }
 
 #updates {
-	/* position: absolute; */
-	top: 2px;
-	left: 0px;
+	position: absolute;
 	background: rgba(0,0,0, .4);
+	
 }
 
 #social {
 	position: absolute;
-	left: 0;
-	top: 0;
 	white-space: nowrap;
 }
 
 .network {
 	width: auto;
-	
+	float: right;
 }
 
-.socialHead {
+.goalFollowNameStyle {
 	color: rgba(191, 30, 46, 1);
 	padding-left: 20px;
-	/* padding-right: 20px; */
 	position: relative;
 }
 
-.socialName {
+.actualStatusStyle {
 	/* padding-left: 20px; */
-	padding-right: 20px;
+	padding-right: 0px;
 	padding-left: 10px;
 	position: relative;
 }
+
+.goalStyle {
+	/* padding-left: 20px; */
+	padding-right: 20px;
+	padding-left: 0px;
+	position: relative;
+}
+
 
 .borderTop {
 	/* position: absolute; */
@@ -104,8 +110,7 @@ html, body {
 }
 
 .network {
-	width: 0; 
-	padding-right: 0;
+	width: 0;
 }
 
 .icon {
@@ -120,39 +125,44 @@ html, body {
   display: inline-block;
 }
 
-.socialHead,.socialName {
+.goalFollowNameStyle,.actualStatusStyle, .goalStyle{
 	padding-top: 10px;
-	font-size: 56px;
-	line-height: 56px;
+	/* font-size: 56px;
+	line-height: 56px; */
+	font-size: 8px;
+	line-height: 8px;
 
 	white-space: nowrap;
   overflow: hidden;
   clear: both;
-	display: inline-block;	
+	display: inline-block;
 }
 
 #social .animated .borderTop {
 	animation: soBorderTop 60s forwards;
+	/* float: right; */
 }
 
 @keyframes soBorderTop {
-  0% { width: 0;}
+  0% { width: 0%;}
   1.16% {width: 100%;}
   98.84% {width: 100%;}
-  100% {width: 0;}
+  100% {width: 0%;}
 }
 
 #social .animated .network {
+	float: right;
 	animation: network 60s forwards;
+	
 }
 
 @keyframes network {
-  0% { width: 0; padding-right: 0;}
-  0.23% { width: 0; padding-right: 0;}
-  1.4% {width: 100%; padding-right: 40px;}
-  98.6% {width: 100%;padding-right: 40px;}
-	99.77% {width: 0;padding-right: 0;}
-	100% {width: 0;padding-right: 0;}
+  0% { width: 0%; padding-right: calc(0 - 100%);}
+  0.23% { width: 0%; padding-right: calc(0 - 100%);}
+  1.4% {width: 100%; padding-right: calc(0 - 100%);}
+  98.6% {width: 100%;padding-right: calc(0 - 100%);}
+	99.77% {width: 0%;padding-right: calc(0 - 100%);}
+	100% {width: 0%;padding-right: calc(0 - 100%);}
 }
 
 .animated .icon {
@@ -168,11 +178,11 @@ html, body {
   100% { left: -1600px;}
 }
 
-.animated .socialHead {
-	animation: socialHead 60s forwards;
+.animated .goalFollowNameStyle {
+	animation: goalFollowNameStyle 60s forwards;
 }
 
-@keyframes socialHead {
+@keyframes goalFollowNameStyle {
   0% { left: -1600px;}
   0.93% { left: -1600px;}
   2.56% { left: 0;}
@@ -181,11 +191,24 @@ html, body {
   100% { left: -1600px;}
 }
 
-.animated .socialName {
-	animation: socialName 60s forwards;
+.animated .actualStatusStyle {
+	animation: actualStatusStyle 60s forwards;
 }
 
-@keyframes socialName {
+@keyframes actualStatusStyle {
+  0% { left: 1600px;}
+  1.4% { left: 1600px;}
+  3.03% { left: 0;}
+  96.96% {left: 0px;}
+  98.6% {left: 1600px;}
+  100% { left: 1600px;}
+}
+
+.animated .goalStyle {
+	animation: goalStyle 60s forwards;
+}
+
+@keyframes goalStyle {
   0% { left: 1600px;}
   1.4% { left: 1600px;}
   3.03% { left: 0;}
