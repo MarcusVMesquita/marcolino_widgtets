@@ -143,6 +143,7 @@ html, body {
   display: inline-block;
 }
 
+/* TPM ini */
 .goalFollowNameStyle,.actualStatusStyle, .goalStyle{
 	padding-top: 10px;
 	/* font-size: 56px;
@@ -155,6 +156,8 @@ html, body {
   clear: both;
 	display: inline-block;
 }
+
+/* TMP end */
 
 .socialHead,.socialName {
 	padding-top: 10px;
@@ -202,6 +205,45 @@ html, body {
   96.96% {left: 0px;}
   98.6% {left: -1600px;}
   100% { left: -1600px;}
+}
+
+.animated .goalFollowNameStyle {
+	animation: goalFollowNameStyle 60s forwards;
+}
+
+@keyframes goalFollowNameStyle {
+  0% { left: -1600px;}
+  0.93% { left: -1600px;}
+  2.56% { left: 0;}
+  97.44% {left: 0px;}
+  99.07% {left: -1600px;}
+  100% { left: -1600px;}
+}
+
+.animated .actualStatusStyle {
+	animation: actualStatusStyle 60s forwards;
+}
+
+@keyframes actualStatusStyle {
+  0% { left: 1600px;}
+  1.4% { left: 1600px;}
+  3.03% { left: 0;}
+  96.96% {left: 0px;}
+  98.6% {left: 1600px;}
+  100% { left: 1600px;}
+}
+
+.animated .goalStyle {
+	animation: goalStyle 60s forwards;
+}
+
+@keyframes goalStyle {
+  0% { left: 1600px;}
+  1.4% { left: 1600px;}
+  3.03% { left: 0;}
+  96.96% {left: 0px;}
+  98.6% {left: 1600px;}
+  100% { left: 1600px;}
 }
 
 .animated .socialHead {

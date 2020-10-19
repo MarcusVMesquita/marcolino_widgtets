@@ -130,8 +130,8 @@ $( document ).ready(function() {
     tl = new TimelineMax({repeat: -1});
 
     $( ".item" ).each(function( index ) {
-        tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 2});
-        tl.to(this, 30, {onComplete:rmvAnimated, onCompleteParams:[this]});
+        tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 0});
+        tl.to(this, 60, {onComplete:rmvAnimated, onCompleteParams:[this]});
     });
 
     function addAnimated(identifier){
