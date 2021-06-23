@@ -1,10 +1,7 @@
-/* All html objects will be wrapped in the #wrap div */
 @import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 
 /* Normal Styles */
 
@@ -15,81 +12,86 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	width: 3840px;
-	height: 720px;
+	width: 800px;
+	height: 200px;
 	overflow: hidden;
+
 }
 
 #updates {
-	/* position: absolute; */
-	top: 2px;
+	position: absolute;
 	left: 0px;
-	background: rgba(0,0,0, .4);
+	top: 0px;
 }
 
 #social {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: -7px;
 	white-space: nowrap;
 }
 
 .network {
+	/* padding-right: 40px; */
 	width: auto;
-	
 }
 
-/* TMP ini*/
-.goalFollowNameStyle {
-	color: rgba(191, 30, 46, 1);
-	padding-left: 20px;
+.icon {
+	position: absolute;
+	top: 10px;
+	left: 13px;
+	width: 40px;
+	height: 50px;
+	font-size: 34px;
+	overflow: hidden;
+	display: inline-block;
+    width: 100%;
+	color: #2A7137;
+	text-shadow: #000 0.2px 0.2px 0.2px;
+}
+
+.socialHead, .socialName {
+	padding: 0;
 	position: relative;
 }
-
-.actualStatusStyle {
-	/* padding-left: 20px; */
-	padding-right: 0px;
-	padding-left: 10px;
-	position: relative;
-}
-
-.goalStyle {
-	/* padding-left: 20px; */
-	padding-right: 20px;
-	padding-left: 0px;
-	position: relative;
-}
-
-/* TMP end */
 
 .socialHead {
-	color: rgba(191, 30, 46, 1);
-	padding-left: 20px;
-	/* padding-right: 20px; */
-	position: relative;
+	padding-top: 10px;
+	font-size: 16px;
+	line-height: 14px;
 }
 
-.socialName {
-	/* padding-left: 20px; */
-	padding-right: 20px;
-	padding-left: 10px;
-	position: relative;
+.socialName{
+	font-size: 24px;
+	line-height: 24px;
+	padding-top: 2px;
+}
+
+.borderBottom {
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	top: 51px;
+	left: 0;
+	background-color: #2A7137;
 }
 
 .borderTop {
-	/* position: absolute; */
-	height: 8px;
+	position: absolute;
+	height: 3px;
 	width: 100%;
-	top: 8px;
+	top: 3px;
 	left: 0;
+	background-color: #2A7137;
 }
 
 .borderRight {
 	position: absolute;
-	width: 2px;
-	top: 8px;
-	right: -2px;
-	height: 100%;
+	width: 3px;
+	top: 0;
+	right: -3px;
+	height: 54px;
+	background-color: #2A7137;
 }
 
 .borderLeft {
@@ -97,21 +99,22 @@ html, body {
 	width: 2px;
 	top: 0;
 	left: 0;
-	height: 100%;
+	height: 54px;
+	background-color: #2A7137;
 }
 
 .inner {
 	overflow: hidden;
-	background: rgba(0,0,0, .4);
+	/* background: rgba(0,0,0, .4); */
 }
 
 #social {
-	transform-origin: right top;
+	transform-origin: left top;
 }
 
 #social .inner {
-	margin-right: 0px;
-	padding: 0 0 0px;
+	margin-left: 60px;
+	padding: 0 0 0 0px;
 }
 
 #social .item {
@@ -120,164 +123,196 @@ html, body {
 	left: 0;
 }
 
+
 /* ------------------- Animations ------------------- */
 /* Social Networks ---------------------------------- */
 #social .borderTop{
 	width: 0;
+}
+.borderBottom{
+	width: 0;
+}
+
+.borderLeft{
+	height: 0;
+}
+
+.borderRight{
+	height: 0;
 }
 
 .network {
 	width: 0; 
 	padding-right: 0;
 }
-
 .icon {
-	padding-left: 15px;
-	padding-top: 12px;
-	font-size: 48px;
-	line-height: 56px;
-
-	white-space: nowrap;
-  overflow: hidden;
-  clear: both;
-  display: inline-block;
+	text-indent: -40px;
 }
-
-/* TPM ini */
-.goalFollowNameStyle,.actualStatusStyle, .goalStyle{
-	padding-top: 10px;
-	/* font-size: 56px;
-	line-height: 56px; */
-	font-size: 56px;
-	line-height: 56px;
-
-	white-space: nowrap;
-  overflow: hidden;
-  clear: both;
-	display: inline-block;
-}
-
-/* TMP end */
-
 .socialHead,.socialName {
-	padding-top: 10px;
-	font-size: 56px;
-	line-height: 56px;
-
-	white-space: nowrap;
-  overflow: hidden;
-  clear: both;
-	display: inline-block;	
+	left: -200px;
 }
 
-#social .animated .borderTop {
-	animation: soBorderTop 60s forwards;
+/* Color */
+.animated .borderLeft{
+	animation: coloring 30s forwards;
 }
 
-@keyframes soBorderTop {
-  0% { width: 0;}
-  1.16% {width: 100%;}
-  98.84% {width: 100%;}
-  100% {width: 0;}
+@keyframes coloring {
+  0% {background-color: #2A7137;}
+  20% {background-color: #fff;}
+	40% {background-color: #000;}
+  60% {background-color: #000;}
+	80% {background-color: #2A7137;}
+  100% {background-color: #fff;}
 }
 
+/* Border Left */
+#social .animated .borderLeft {
+	animation: soborderLeft 30s forwards;
+}
+
+@keyframes soborderLeft {
+  0% { height: 0; margin-top: 0px;background-color: #000}
+  2% {height: 54px; margin-top: 0px;background-color: #2A7137}
+	4% {height: 0; margin-top: 54px;background-color: #dfff}
+	20% { height: 0; margin-top: 0px;background-color: #fff}
+  22% {height: 54px; margin-top: 0px;background-color: #2A7137}
+	24% {height: 0; margin-top: 54px;background-color: #000}
+	40% { height: 0; margin-top: 0px;background-color: #000}
+  42% {height: 54px; margin-top: 0px;background-color: #2A7137}
+	44% {height: 0; margin-top: 54px;background-color: #fff}
+	60% { height: 0; margin-top: 0px;background-color: #fff}
+  62% {height: 54px; margin-top: 0px;background-color: #2A7137}
+	64% {height: 0; margin-top: 54px;background-color: #000}
+	80% { height: 0; margin-top: 0px;background-color: #000}
+  82% {height: 54px; margin-top: 0px;background-color: #2A7137}
+	84% {height: 0; margin-top: 54px;background-color: #fff}
+  100% {height: 0; margin-top: 54px;background-color: #fff}
+}
+
+/* Border Bottom */
+#social .animated .borderBottom {
+	animation: soborderBottom 30s forwards;
+}
+
+@keyframes soborderBottom {
+	0% { width: 0; margin-right: 100%; margin-left: 0;}
+	1% {width: 0; margin-right: 100%; margin-left: 0;}
+	2% {width: 100%; margin-right: 0; margin-left: 0;}
+	96% {width: 100%; margin-right: 0; margin-left: 0;}
+	97% {width: 0; margin-right: 0; margin-left: 100%;}
+	100% {width: 0; margin-right: 0; margin-left: 100%;}
+}
+
+/* Border Right */
+.animated .borderRight {
+	animation: soborderRight 30s forwards;
+}
+
+@keyframes soborderRight {
+	0% { height: 0; margin-top: 54px; margin-bottom: 0;}
+	2% { height: 0; margin-top: 54px; margin-bottom: 0;}
+	3% {height: 54px; margin-top: 0px; margin-bottom: 0;}
+	97% {height: 54px; margin-top: 0px; margin-bottom: 0;}
+	98% {height: 0; margin-top: 0px; margin-bottom: 100%;}
+	100% {height: 0; margin-top: 0px; margin-bottom: 100%;}
+}
+
+/* Border Top */
+.animated .borderTop {
+	animation: soborderTop 30s forwards;
+}
+
+@keyframes soborderTop {
+	0% { width: 0; margin-left: 100%}
+	3% { width: 0; margin-left: 100%;}
+	4% {width: 100%; margin-left: 0;}
+	98% {width: 100%; margin-left: 0;}
+	100% {width: 0; margin-left: 0;}
+}
+
+/* Network */
 #social .animated .network {
-	animation: network 60s forwards;
+	animation: network 30s forwards;
 }
 
 @keyframes network {
   0% { width: 0; padding-right: 0;}
-  0.23% { width: 0; padding-right: 0;}
-  1.4% {width: 100%; padding-right: 40px;}
-  98.6% {width: 100%;padding-right: 40px;}
-	99.77% {width: 0;padding-right: 0;}
-	100% {width: 0;padding-right: 0;}
+  0.46% { width: 0; padding-right: 0;}
+  2.8% {width: 100%; padding-right: 40px;}
+  97.2% {width: 100%;padding-right: 40px;}
+  99.54% {width: 0;padding-right: 0;}
+  100% {width: 0;padding-right: 0;}
 }
 
+/* Icon */
 .animated .icon {
-	animation: icon 60s forwards;
+	animation: icon 30s forwards;
 }
 
 @keyframes icon {
-  0% { left: -1600px;}
-  1.4% { left: -1600px;}
-  3.03% { left: 0;}
-  96.96% {left: 0px;}
-  98.6% {left: -1600px;}
-  100% { left: -1600px;}
+  0% { text-indent: -40px;}
+  1.86% { text-indent: -40px;}
+  4.66% {text-indent: 0px;}
+  95.34% { text-indent: 0px;}
+  98.14% { text-indent: -40px;}
+  100% { text-indent: -40px;}
 }
 
-.animated .goalFollowNameStyle {
-	animation: goalFollowNameStyle 60s forwards;
-}
-
-@keyframes goalFollowNameStyle {
-  0% { left: -1600px;}
-  0.93% { left: -1600px;}
-  2.56% { left: 0;}
-  97.44% {left: 0px;}
-  99.07% {left: -1600px;}
-  100% { left: -1600px;}
-}
-
-.animated .actualStatusStyle {
-	animation: actualStatusStyle 60s forwards;
-}
-
-@keyframes actualStatusStyle {
-  0% { left: 1600px;}
-  1.4% { left: 1600px;}
-  3.03% { left: 0;}
-  96.96% {left: 0px;}
-  98.6% {left: 1600px;}
-  100% { left: 1600px;}
-}
-
-.animated .goalStyle {
-	animation: goalStyle 60s forwards;
-}
-
-@keyframes goalStyle {
-  0% { left: 1600px;}
-  1.4% { left: 1600px;}
-  3.03% { left: 0;}
-  96.96% {left: 0px;}
-  98.6% {left: 1600px;}
-  100% { left: 1600px;}
-}
-
+/* Social Head */
 .animated .socialHead {
-	animation: socialHead 60s forwards;
+	animation: socialHead 30s forwards;
 }
 
 @keyframes socialHead {
-  0% { left: -1600px;}
-  0.93% { left: -1600px;}
-  2.56% { left: 0;}
-  97.44% {left: 0px;}
-  99.07% {left: -1600px;}
-  100% { left: -1600px;}
+  0% { left: -400px;}
+  1.86% { left: -400px;}
+  5.12% { left: 0;}
+  94.88% {left: 0px;}
+  98.14% {left: -400px;}
+  100% { left: -400px;}
 }
 
+/* Social Name */
 .animated .socialName {
-	animation: socialName 60s forwards;
+	animation: socialName 30s forwards;
 }
 
 @keyframes socialName {
-  0% { left: 1600px;}
-  1.4% { left: 1600px;}
-  3.03% { left: 0;}
-  96.96% {left: 0px;}
-  98.6% {left: 1600px;}
-  100% { left: 1600px;}
+  0% { left: -400px;}
+  2.8% { left: -400px;}
+  6.06% { left: 0;}
+  93.94% {left: 0px;}
+  97.2% {left: -400px;}
+  100% { left: -400px;}
+}
+
+#video video, #image img {
+	position: absolute;
+	left: 0;
+	right: 0; 
+	min-width: 1920px;
+	min-height: 1080px;
+}
+
+#overlay {
+	width: 1920px;
+	height: 1080px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .primaryFont {
-	color: #FFF;
-	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	font-family: 'Aldrich', sans-serif;
+	text-shadow: rgb(0, 0, 0) 1.5px 1.5px 1.5px;
+	font-weight: bold;
 }
 
 .secondaryFont {
-	color: #eadc04;
-	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	font-family: 'Aldrich', sans-serif;
+	text-shadow: rgb(0, 0, 0) 0.3px 0.3px 0.3px;
+	font-weight: bold;
 }

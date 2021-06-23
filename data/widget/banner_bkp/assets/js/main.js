@@ -46,27 +46,27 @@ function setVerticalOffset(target, settingVar){
 	$(target).css("transform", "translateY(" + settingVar + "px)");
 }
 
-// setFontSize("#title", settings.fonts.titleSize);
+setFontSize("#title", settings.fonts.titleSize);
 setVerticalOffset("#title", settings.fonts.titleVerticalOffset);
 
-// setFontSize("#subtitle", settings.fonts.subtitleSize);
+setFontSize("#subtitle", settings.fonts.subtitleSize);
 setVerticalOffset("#subtitle", settings.fonts.subtitleVerticalOffset);
 
-// setFontSize("#list .name", settings.fonts.labelNameSize);
+setFontSize("#list .name", settings.fonts.labelNameSize);
 setVerticalOffset("#list .name", settings.fonts.labelNameVerticalOffset);
 $('#list .name').css("line-height", settings.fonts.labelNameSize + "px");
 
-// setFontSize("#list .type", settings.fonts.labelHeaderSize);
+setFontSize("#list .type", settings.fonts.labelHeaderSize);
 setVerticalOffset("#list .type", settings.fonts.labelHeaderVerticalOffset);
 $('#list .type').css("line-height", settings.fonts.labelHeaderSize + "px");
 
-// setFontSize("#time", settings.fonts.countdownTimeSize);
+setFontSize("#time", settings.fonts.countdownTimeSize);
 setVerticalOffset("#time", settings.fonts.countdownTimeVerticalOffset);
 
-// setFontSize("#message", settings.fonts.countdownMessageSize);
+setFontSize("#message", settings.fonts.countdownMessageSize);
 setVerticalOffset("#message", settings.fonts.countdownMessageVerticalOffset);
 
-// setFontSize("#endMessage", settings.fonts.countdownEndMessageSize);
+setFontSize("#endMessage", settings.fonts.countdownEndMessageSize);
 setVerticalOffset("#endMessage", settings.fonts.countdownEndMessageVerticalOffset);
 
 //  Labels
@@ -103,21 +103,17 @@ function getNames(){
 	  var myvar = data;
 	  $('#facebook').text(data);
 	});
-	// $.get("../TextFiles/" + settings.labels.labelFivePath + ".txt", function(data) {
-	// 	var myvar = data;
-	// $('#qtdFollow').text(data);
-	// });
+	$.get("../TextFiles/" + settings.labels.labelFivePath + ".txt", function(data) {
+		var myvar = data;
+	$('#qtdFollow').text(data);
+	});
 	$.get("../TextFiles/" + settings.labels.labelSixPath + ".txt", function(data) {
 		var myvar = data;
 	$('#viewerCount').text(data);
 	});
-	// $.get("../TextFiles/" + settings.labels.labelSevenPath + ".txt", function(data) {
-	// 	var myvar = data;
-	// $('#qtdSubscriber').text(data);
-	// });
-	$.get("../TextFiles/" + settings.labels.labelEightPath + ".txt", function(data) {
+	$.get("../TextFiles/" + settings.labels.labelSevenPath + ".txt", function(data) {
 		var myvar = data;
-	$('#lastBits').text(data);
+	$('#qtdSubscriber').text(data);
 	});
 }
 
@@ -130,11 +126,11 @@ $("#twitch").html(settings.social.twitch);
 $("#twitterHeader").html(settings.social.recentFollowHeader);
 $("#facebookHeader").html(settings.social.recentSubHeader);
 $("#instagramHeader").html(settings.social.recentDonateHeader);
-$("#youtubeHeader").html(settings.social.recentBitHeader);
-// $("#goalFollowName").html(settings.social.goalFollowName);
-// $("#goalFollow").html("/" + settings.social.goalFollow);
-// $("#goalSubName").html(settings.social.goalSubName);
-// $("#goalSub").html("/" + settings.social.goalSub);
+$("#youtubeHeader").html(settings.social.biggestDonateHeader);
+$("#goalFollowName").html(settings.social.goalFollowName);
+$("#goalFollow").html("/" + settings.social.goalFollow);
+$("#goalSubName").html(settings.social.goalSubName);
+$("#goalSub").html("/" + settings.social.goalSub);
 
 // Add Animations
 
@@ -144,8 +140,8 @@ $( document ).ready(function() {
     tl = new TimelineMax({repeat: -1});
 
     $( ".item" ).each(function( index ) {
-        tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this]});
-        tl.to(this, 30, {onComplete:rmvAnimated, onCompleteParams:[this]});
+        tl.to(this, 0, {onComplete:addAnimated, onCompleteParams:[this], delay: 1});
+        tl.to(this, 5, {onComplete:rmvAnimated, onCompleteParams:[this]});
     });
 
     function addAnimated(identifier){
